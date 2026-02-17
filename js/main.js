@@ -34,8 +34,7 @@ const tripData = {
     totalDays: 8,
     startDate: "2026-04-14",
     plans: [
-        {
-            day: 1, date: "4/14 (日)", title: "🛬 啟程 ", city: "首爾", accommodation: accoData[0],
+        { day: 1, date: "4/14 (二)", title: "🛬 啟程 ", city: "首爾", accommodation: accoData[0],
             activities: [
                 {
                     time: "15:00", location: "⮕ 桃園機場第一航廈", category: "交通", 
@@ -59,22 +58,162 @@ const tripData = {
                 }
             ]
         },
-        {
-            day: 2, date: "4/15 (一)", title: "文創聖水洞 | 青春弘大", city: "首爾", accommodation: accoData[0],
+        { day: 2, date: "4/15 (三)", title: "時尚聖水洞 | 青春弘大", city: "首爾", accommodation: accoData[0],
             activities: [
                 {
-                    time: "09:30", location: "明洞換錢所 - MONEY PLANET ", category: "Naver Map", mapUrl: "https://naver.me/FJiJ7NTO",
+                    time: "09:30", location: "MONEY PLANET ", category: "Naver Map", mapUrl: "https://naver.me/FJiJ7NTO",
                     desc: "記得領取Creatrip優惠劵。",
                     images: getPic("day2/moneychange", 1)
                 },
+                {
+                    time: "11:00", location: "聖水洞", category: "逛街", mapUrl: "",
+                    desc: "聖水洞2號出口 ⮕ AMORE Seongsu、onion咖啡廳。",
+                    images: getPic("day2/seongsu", 8)
+                },
+                {
+                    time: "16:30", location: "弘大", category: "逛街", mapUrl: "",
+                    desc: "有許多文創小物，以及首爾著名的亂打秀也在這！",
+                    images: getPic("day2/hongda", 4)
+                },
             ]
         },
-        { day: 3, date: "4/16 (二)", title: "首爾 -> 釜山 KTX", city: "釜山", accommodation: accoData[1], activities: [] },
-        { day: 4, date: "4/17 (三)", title: "釜山：海雲台與膠囊火車", city: "釜山", accommodation: accoData[1], activities: [] },
-        { day: 5, date: "4/18 (四)", title: "釜山 -> 慶州當日往返", city: "慶州", accommodation: accoData[1], activities: [] },
-        { day: 6, date: "4/19 (五)", title: "釜山 -> 大邱", city: "大邱", accommodation: accoData[2], activities: [] },
-        { day: 7, date: "4/20 (六)", title: "大邱 -> 首爾最後採買", city: "首爾", accommodation: accoData[2], activities: [] },
-        { day: 8, date: "4/21 (日)", title: "首爾 -> 歸途", city: "首爾", accommodation: accoData[2], activities: [] }
+        { day: 3, date: "4/16 (四)", title: "🚇KTX 首爾 ⮕ 釜山", city: "釜山", accommodation: accoData[1], 
+            activities: [
+                    {
+                        time: "08:30", location: "首爾站", category: "交通", mapUrl: "",
+                        desc: "",
+                        images: []
+                    },
+                    {
+                        time: "11:25", location: "KTX-青龍 08:58 首爾 ⮕ 11:16 釜山", category: "交通", mapUrl: "",
+                        desc: "搭乘KTX高速列車，約2小時40分鐘抵達釜山，享受舒適快捷的旅程。",
+                        images: []
+                    },
+                    {
+                        time: "11:40", location: "SPAO南浦店", category: "Naver Map", mapUrl: "https://naver.me/5Is9BeBF",
+                        desc: "免費寄放行李，最晚至21:00。",
+                        images: getPic("day3/spao", 1)
+                    },
+                    {
+                        time: "12:00", location: "樂天百貨", category: "景點", mapUrl: "",
+                        desc: "南浦樂天（樂天百貨光復店與樂天超市）是釜山自由行的指標性購物點，位於地鐵南浦站旁，特色在於結合高空海景展望台、室內音樂噴泉、一站式伴手禮採買以及即時退稅便利性。其交通便利、環境寬敞，是下雨天或最後補貨的最佳購物選擇。 ",
+                        images: getPic("day3/lotte", 3)
+                    },
+                    {
+                        time: "14:00", location: "影島大橋", category: "景點", mapUrl: "",
+                        desc: "每週六 14:00-14:15 開橋。",
+                        images: getPic("day3/yeongdo", 5)
+                    },
+                    {
+                        time: "14:30", location: "南浦地下購物中心", category: "逛街", mapUrl: "",
+                        desc: "便宜服飾，但要注意品質。",
+                        images: getPic("day3/nampoUnderShop", 3)
+                    },
+                    {
+                        time: "15:30", location: "札嘎其市場", category: "逛街", mapUrl: "",
+                        desc: "釜山南浦洞商圈和影島大橋附近的「札嘎其市場」（부산 자갈치시장））可是韓國最大最有名的釜山海鮮市場代表。札嘎其市場必吃有各種新鮮海鮮，像生章魚、鮑魚、帝王蟹、油蟹、鮮蝦等。想吃海鮮的人，可以先在一樓買海鮮，再到二樓餐廳代客料理。只要來到釜山玩，想大啖海鮮，札嘎其海鮮市場，絕對是首選，而且大部份攤位價格透明，現點現秤現報價，部份攤位還會些簡單中文。",
+                        images: getPic("day3/Jagalchi", 5)
+                    },
+                    {
+                        time: "16:30", location: "BIFF廣場", category: "逛街", mapUrl: "",
+                        desc: "自8.15光復後，在釜山南浦洞開始出現一、兩間電影院，至1960年代後成為有20多間電影院林立的南浦洞電影院街。1996年舉辦釜山國際電影節，電影院街也重新整修，並被改名為BIFF廣場。過去BIFF廣場為釜山國際電影節前夜祭的主舞臺，曾舉辦蓋手印、座談會等多項活動。隨著電影殿堂於海雲臺區竣工，釜山國際電影節的開幕式等活動皆改至海雲臺區舉行。如今BIFF廣場留下許多電影節草創期的痕跡，還有許多知名的電影人的手印留在街道上，逛起來別有一番樂趣。街上還販售各種小吃，成為釜山具代表性的美食街，還能購物與觀光，讓年輕人們趨之若騖。",
+                        images: getPic("day3/biff", 3)
+                    },
+                    {
+                        time: "17:30", location: "光復路文化時尚街", category: "逛街", mapUrl: "",
+                        desc: "",
+                        images: getPic("day3/fashionStreet", 6)
+                    },
+                    {
+                        time: "20:30", location: "取回行李",  category: "Naver Map", mapUrl: "https://naver.me/5Is9BeBF",
+                        desc: "",
+                        images: getPic("day3/spao", 1)
+                    }
+
+
+            ] },
+        { day: 4, date: "4/17 (五)", title: "🌊浪漫海雲台", city: "釜山", accommodation: accoData[1], 
+            activities: [
+                {
+                    time: "10:30", location: "Skyline Luge", category: "釜山PASS", mapUrl: "",
+                    desc: "Skyline Luge 是國內最早的斜坡滑車，安全又容易操作。<br>"+
+                          "共有四條總長 2.4公里的專用軌道。<br>"+
+                          "可以盡情享受東釜山美麗的景緻，同時也可以享受滑降的高空滑索。<br> 🎫門票<br>"+
+                          "斜坡滑車二回券 : 成人 30,000韓元、兒童 12,000韓元<br>"+
+                          "高空滑索一回券 : 40,000韓元<br>",
+                    images: getPic("day4/skyline", 6)
+                },
+                {
+                    time: "12:00", location: "海岸列車🚉 松亭 ⮕ 尾浦", category: "釜山PASS", mapUrl: "",
+                    desc: "藍天和大海呼吸的地方！將 4.8公里長的東海南部線舊鐵路設施經過環保再開發，沿着海岸絕美景色行駛的海雲台海岸列車可以從海雲台尾浦到迎月隧道、海月觀景台、青沙浦站、踏石觀景台、九德浦及松亭站，約 30多分鐘的車程裡可以欣賞到東釜山壯麗的海岸線。<br>"+
+                          "<br>🎫門票<br>海岸列車 (自由票) 16,000韓元",
+                    images: getPic("day4/train", 6)
+                },
+                {
+                    time: "13:30", location: "釜山 x The Sky", category: "釜山PASS", mapUrl: "",
+                    desc: "<b>Busan X the Sky</b> 位於韓國第二高(411.6公尺)的「海雲台LCT地標塔」內，也是國內最高、最大規模的觀景台。<br>"+
+                          "還可以同時欣賞到被譽為大韓八景之一的海雲台壯麗海景與釜山華麗城市景觀<br>"+
+                          "除了世界著名的釜山地標 (廣安大橋、海雲台) 外，還能欣賞到釜山的白天與夜晚。觀景台內設有華麗的媒體動畫、為旅客提供卓越服務的休息室，以及簡約的咖啡廳等。<br>"+
+                          "在Busan X the Sky體驗一下從腳下展開的無邊無盡的世界吧。<br>"+
+                          "<br>🎫門票<br>成人 27,000韓元 / 兒童 (小學生)、年長者 (65歲以上) 24,000韓元 / 36個月以下嬰幼兒 免費 (須檢附證明)",
+                    images: getPic("day4/xthesky", 4)
+                },
+                {
+                    time: "14:30", location: "Club D Oasis", category: "釜山PASS", mapUrl: "",
+                    desc: "🎫門票<br>大人/兒童 均一價 33,000韓元<br><br>"+
+                          "Spa券：戶外Spa（清水堂）＋汗蒸房 4小時免費使用 <b>不含水上樂園</b><br>"+
+                          "🩱使用戶外Spa（清水堂）時，需自備泳衣<br>"+
+                          "💵現場加付15,000韓元，可升級為5小時通用券（含水上樂園＋Spa券）<br>"+
+                          "⭐清水堂（5樓）、Sand Cafe、Sand Kitchen（6樓）全餐飲項目可享10%優惠<br>"+
+                          "⭐僅限向員工出示Visit Busan Pass時使用，使用自助機點餐（Kiosk）無法享受折扣",
+                    images: getPic("day4/clubD", 8)
+                },
+                {
+                    time: "20:00", location: "大榮跆拳道(20:00-21:20)", category: "釜山PASS", mapUrl: "",
+                    desc: "韓國的代表性武術就是跆拳道。自從2000年悉尼奧運會開始被列為奧運會正式比賽項目以來，已經在200多個國家設立了跆拳道協會，成了深受全世界人們喜愛的武術。如今跆拳道不再是單純的武術，而是變成了韓國的代表性文化，所有人都可以輕鬆愉快地體驗跆拳道。<br>"+
+                          "<br>🎫門票<br>跆拳道一日體驗課程 每人 50,000韓元",
+                    images: getPic("day4/taekwondo", 2)
+                } 
+            ] },
+        { day: 5, date: "4/18 (六)", title: "🚡松島 | 🌉廣安島無人機表演", city: "釜山", accommodation: accoData[1], 
+            activities: [ 
+                {
+                    time: "09:00", location: "🚡松島海上纜車站🔁Sky Park站", category: "釜山PASS", mapUrl: "",
+                    desc: "<b>松島海上纜車，超乎想象的快樂！</b><br><br>松島海上纜車總長 1.62公里、最高點達 86公尺，橫穿松島海水浴場東側的松林公園及西側的岩南公園。不僅能感受橫跨大海的刺激，還能將松島海水浴場、釜山 影島, 南港大橋、松島海岸步道，以及波濤洶涌的奇岩絕壁都盡收眼底。<br>"+
+                          "<br>🎫門票<br>水晶遊輪【來回】成人 : 22,000韓元、兒童 : 16,000韓元",
+                    images: getPic("day5/Songdo", 3)
+                },
+                {
+                    time: "10:00", location: "手翻書體驗", category: "釜山PASS", mapUrl: "",
+                    desc: "(有可能不會去，依當時狀況安排！)<br>⭐每製作一本手翻書，會需要兩張 VISIT BUSAN PASS。<br>- (2人) 手翻書一本 + 額外印製費用 5,000韓元<br>- (3人) 手翻書兩本 + 額外印製費用 10,000韓元<br>- (4人) 手翻書三本 + 額外印製費用 10,000韓元<br>"+
+                          "<br>🎫費用<br>製作一本手翻書時，一人 15,000韓元；製作兩本手翻書時，一人 10,000韓元。",
+                    images: getPic("day5/flipbook", 4)
+                },
+                {
+                    time: "11:00", location: "ARTE美術館", category: "釜山PASS", mapUrl: "",
+                    desc: "Arte Museum 釜山不只是是全世界規模最大的 Arte Museum，同時也是韓國知名創意設計公司 d'strict 繼韓國三座城市、美國拉斯維加斯、中國成都與香港、阿拉伯聯合大公國杜拜之後，在全球建造的第八座沉浸式多媒體藝術展覽館。講述 <b>超越時空的永恆自然</b> 的 Arte Museum 至今已與全球超過 700萬觀眾分享令人驚嘆的藝術體驗，更即將在擁有山與大海、過去與未來以及歷史的喜怒哀樂的夢想城市 - 釜山與更多的觀眾見面！這次將會以與釜山形象相似的 <b>循環 (CIRCLE)</b> 爲主軸，向各位展示以自然和人生循環為主題的 19件作品。<br>"+
+                          "<br>🎫費用<br>平日 成人 22,000韓元 / 青少年 18,000韓元 / 兒童 15,000韓元<br>週末、國定假日 成人 25,000韓元 / 青少年 21,000韓元 / 兒童 18,000韓元",
+                    images: getPic("day5/arte", 4)
+                },
+                {
+                    time: "14:30", location: "", category: "鑽石灣遊艇", mapUrl: "",
+                    desc: "。",
+                    images: getPic("day5/", 6)
+                },
+                {
+                    time: "16:00", location: "SPA LAND", category: "釜山PASS", mapUrl: "",
+                    desc: "。",
+                    images: getPic("day5/", 6)
+                },
+                {
+                    time: "19:30", location: "廣安大橋無人機表演", category: "景點", mapUrl: "",
+                    desc: "每週六晚上8點，在釜山的廣安大橋上會有精彩的無人機燈光秀表演，為夜晚增添絢麗色彩。這場表演結合了音樂和燈光，吸引了許多遊客前來觀賞，是釜山夜生活的一大亮點。",
+                    images: getPic("day5/bridgeShow", 4)
+                }
+            ] },
+        { day: 6, date: "4/19 (日)", title: "釜山 -> 大邱", city: "大邱", accommodation: accoData[2], activities: [] },
+        { day: 7, date: "4/20 (一)", title: "大邱 -> 首爾最後採買", city: "首爾", accommodation: accoData[2], activities: [] },
+        { day: 8, date: "4/21 (二)", title: "首爾 -> 歸途", city: "首爾", accommodation: accoData[2], activities: [] }
     ]
 };
 
